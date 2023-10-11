@@ -1,10 +1,10 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0.0",
-	"SemVersion": "1.0.0",
+	"VersionName": "1.0.1",
+	"SemVersion": "1.0.1",
 	"FriendlyName": "SaveLoadHotkeys",
-	"Description": "",
+	"Description": "Keybinds for saving and loading in a single click!",
 	"Category": "Modding",
 	"CreatedBy": "Sam Crosscat",
 	"CreatedByURL": "https://crosscat-is.me",
@@ -23,10 +23,10 @@
 		}
 	],
 	"Modules": [
-        {
-            "Name": "SaveLoadHotkeys",
-            "Type": "Runtime",
-            "LoadingPhase": "Default"
-        }
-    ]
+		{
+			"Name": "SaveLoadHotkeys",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
 }
