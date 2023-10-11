@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"SemVersion": "1.0.0",
+	"FriendlyName": "SaveLoadHotkeys",
+	"Description": "",
+	"Category": "Modding",
+	"CreatedBy": "Sam Crosscat",
+	"CreatedByURL": "https://crosscat-is.me",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "SML",
+			"SemVersion": "^3.5.1",
+			"Enabled": true
+		}
+	],
+	"Modules": [
+        {
+            "Name": "SaveLoadHotkeys",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ]
+}
