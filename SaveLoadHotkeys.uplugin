@@ -1,8 +1,8 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0.1",
-	"SemVersion": "1.0.1",
+	"VersionName": "1.0.2",
+	"SemVersion": "1.0.2",
 	"FriendlyName": "SaveLoadHotkeys",
 	"Description": "Keybinds for saving and loading in a single click!",
 	"Category": "Modding",
@@ -18,7 +18,7 @@
 	"Plugins": [
 		{
 			"Name": "SML",
-			"SemVersion": "^3.5.1",
+			"SemVersion": "^3.6.0",
 			"Enabled": true
 		}
 	],

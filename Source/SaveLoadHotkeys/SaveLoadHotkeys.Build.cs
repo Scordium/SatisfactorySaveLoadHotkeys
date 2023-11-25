@@ -28,7 +28,6 @@ public class SaveLoadHotkeys : ModuleRules
             "AIModule",
             "GameplayTasks",
             "SlateCore", "Slate", "UMG",
-            "InstancedSplines",
             "RenderCore",
             "CinematicCamera",
             "Foliage",
@@ -38,7 +37,7 @@ public class SaveLoadHotkeys : ModuleRules
             "TemplateSequence",
             "NetCore",
             "GameplayTags",
-		});
+        });
 
         // FactoryGame plugins
         PublicDependencyModuleNames.AddRange(new[] {
