@@ -8,6 +8,7 @@
 #include "FGSaveSession.h"
 #include "FGSaveSystem.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Kismet/GameplayStatics.h"
 #include "SaveLoadFunctions.generated.h"
 
 /**
@@ -34,7 +35,7 @@ public:
 		if(!WorldContext) return;
 		
 		auto SaveSystem = UFGSaveSystem::Get(WorldContext);
-		auto Sessions = SaveSystem->NativeEnumerateSaveGames();
+		auto Sessions = SaveSystem->NativeEnumerateSaveGamesSync();
 		auto SessionName = Cast<AFGGameMode>(WorldContext->GetWorld()->GetAuthGameMode())->GetSaveSessionName();
 
 		FSaveHeader LatestSaveHeader = FSaveHeader();
@@ -46,7 +47,7 @@ public:
 		}
 
 
-		auto Options = TMap<FString, FString>();
+		auto Options = FLoadSaveFileParameters();
 		auto Player = UGameplayStatics::GetPlayerController(WorldContext, 0);
 		SaveSystem->LoadSaveFile(LatestSaveHeader, Options, Player);
 	}
@@ -55,7 +56,7 @@ public:
 	static double GetSecondsSinceLastSave(UObject* WorldContext)
 	{
 		auto SaveSystem = UFGSaveSystem::Get(WorldContext);
-		auto Sessions = SaveSystem->NativeEnumerateSaveGames();
+		auto Sessions = SaveSystem->NativeEnumerateSaveGamesSync();
 		auto GameState = Cast<AFGGameState>(UGameplayStatics::GetGameState(WorldContext));
 		auto const SessionName = GameState->GetSessionName();
 

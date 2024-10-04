@@ -8,42 +8,27 @@ public class SaveLoadHotkeys : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        // FactoryGame transitive dependencies
-        // Not all of these are required, but including the extra ones saves you from having to add them later.
         PublicDependencyModuleNames.AddRange(new[] {
             "Core", "CoreUObject",
             "Engine",
             "DeveloperSettings",
             "PhysicsCore",
             "InputCore",
-            "OnlineSubsystem", "OnlineSubsystemNull", "OnlineSubsystemUtils",
-            "SignificanceManager",
+            "CoreOnline",
             "GeometryCollectionEngine",
-            "ChaosVehiclesCore", "ChaosVehicles", "ChaosSolverEngine",
+            "ChaosSolverEngine",
             "AnimGraphRuntime",
-            "AkAudio",
             "AssetRegistry",
             "NavigationSystem",
-            "ReplicationGraph",
             "AIModule",
             "GameplayTasks",
             "SlateCore", "Slate", "UMG",
             "RenderCore",
             "CinematicCamera",
             "Foliage",
-            "Niagara",
             "EnhancedInput",
-            "GameplayCameras",
-            "TemplateSequence",
             "NetCore",
             "GameplayTags",
-        });
-
-        // FactoryGame plugins
-        PublicDependencyModuleNames.AddRange(new[] {
-            "AbstractInstance",
-            "InstancedSplinesComponent",
-            "SignificanceISPC"
         });
 
         // Header stubs
